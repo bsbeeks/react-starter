@@ -12,4 +12,4 @@ const config = {
   }
 };
 
-module.exports = config[process.env.API_URL];
+module.exports = config[process.env.NODE_ENV];

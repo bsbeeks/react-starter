@@ -7,7 +7,7 @@ const config = {
     BASE_URL: 'http://localhost:3000/api/'
   },
   
-  prod: {
+  production: {
     BASE_URL: 'http://localhost:3000/api/'
   }
 };

@@ -5,11 +5,10 @@
   "main": "app/EmployeeTools.js",
   "private": true,
   "scripts": {
-    "start": "webpack -w & node server.js && wait",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "eslint app",
     "webpack": "webpack -w",
-    "sand": "webpack -w --config webpack.sand.config.js",
-    "prod": "webpack -w --config webpack.prod.config.js"
+    "webpack:sand": "webpack -w --config webpack.sand.config.js",
+    "webpack:prod": "webpack -w --config webpack.prod.config.js"
   },
   "author": "",
   "license": "ISC",

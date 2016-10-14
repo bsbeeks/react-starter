@@ -5,9 +5,9 @@
   "main": "app/EmployeeTools.js",
   "private": true,
   "scripts": {
+    "start": "webpack -w & node server.js && wait",
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack -w",
-    "dev": "webpack -w & node public/server.js && wait",
     "sand": "webpack -w --config webpack.sand.config.js",
     "prod": "webpack -w --config webpack.prod.config.js"
   },

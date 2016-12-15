@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
@@ -22,9 +23,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
-        },
-        'plugins': ['transform-object-assign']
+          presets: ['es2015', 'react'],
+          plugins: ['transform-object-assign']
+        }
       }
     ]
   },
@@ -37,6 +38,15 @@ module.exports = {
       'process.env': {
         'NODE_ENV': JSON.stringify('development')
       }
+    }),
+    // needed for Axios IE11 support
+    new webpack.ProvidePlugin({
+      'Promise': 'es6-promise'
+    }),
+    new HtmlWebpackPlugin({
+      filename: '../index.html',
+      template: 'index_template.ejs',
+      minify: false
     }),
   ],
   resolve: {

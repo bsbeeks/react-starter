@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 4.4.5
+
+dependencies:
+  cache_directories:
+    - "node_modules"
+
+  override:
+    - npm install --no-progress
+
